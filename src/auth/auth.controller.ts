@@ -1,15 +1,34 @@
+<<<<<<< HEAD
+=======
+import { IsEmail, IsString, MinLength } from 'class-validator';
+>>>>>>> feat/backend-1
 import { Controller, Post, Get, Body, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { JwtGuard } from './jwt.guard';
 import { CurrentUser } from './decorators/current-user.decorator';
 
 class RegisterDto {
+<<<<<<< HEAD
   email: string;
+=======
+  @IsEmail()
+  email: string;
+
+  @IsString()
+  @MinLength(6)
+>>>>>>> feat/backend-1
   password: string;
 }
 
 class LoginDto {
+<<<<<<< HEAD
   email: string;
+=======
+  @IsEmail()
+  email: string;
+
+  @IsString()
+>>>>>>> feat/backend-1
   password: string;
 }
 
